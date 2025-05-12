@@ -4,23 +4,33 @@ body {
   /* text-emphasis-color: #393652;
   accent-color: #99ccd6;
   accent-color: #e995aa; */
-  font-family: "Gaegu";
+  font-family: "Gaegu", "Karla", "Verdana";
 }
 
+/* fonts */
+.gaegu-regular {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla-light {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* paragraph style */
 h1 {
     text-align: center;
 }
 
+/* colors */
 a:any-link{
     color: #393652;
 }
 
 a:visited{
     color: #e995aa;
-}
-
-.gaegu-regular {
-  font-family: "Gaegu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
