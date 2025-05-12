@@ -7,6 +7,36 @@ body {
   font-family: "Karla", "Gaegu", "Verdana";
 }
 
+/* elements */
+.element {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a::before {
+  content: '';
+  padding: 10em;
+}
+
 /* fonts */
 .gaegu-regular {
   font-family: "Gaegu", sans-serif;
@@ -16,7 +46,6 @@ body {
 
 .karla-light {
   font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
@@ -24,10 +53,6 @@ body {
 /* paragraph style */
 h1 {
     text-align: center;
-    font-family: "Gaegu";
-}
-
-h2 {
     font-family: "Gaegu";
 }
 
