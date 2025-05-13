@@ -1,6 +1,17 @@
+:root {
+  --color-main-light: #FDF7F3;
+  --color-main-medium: #4279a8;
+  --color-main-dark: #393652;
+  --color-accent-pink: #e995aa;
+  --color-accent-blue: #99CCD6;
+  --color-link: #393652;
+  --color-link-clicked: #a1516c;
+  --main-page-width: 1000;
+}
+
 body {
-  background-color: #FDF7F3;
-  color: #4279a8;
+  background-color: var(--color-main-light);
+  color: var(--color-main-medium);
   /* text-emphasis-color: #393652;
   accent-color: #99ccd6;
   accent-color: #e995aa; */
@@ -28,35 +39,72 @@ h1 {
 
 /* colors */
 a:any-link{
-    color: #393652;
+    color: var(--color-link);
 }
 
 a:visited{
-    color: #e995aa;
+    color: var(--color-link-clicked);
 }
 
-/* CLASSES ================================================================== */
+/* CONTAINERS ================================================================== */
+.page {
+  display: flex;
+  max-width: 1000px;
+  padding: 1em;
+  flex-flow: row wrap;
+  row-gap: 10px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*todo: combine navbar into title card*/
+.navbar{
+  display: flex;
+  max-width: 1000px;
+  font-family: "Gaegu";
+  background: var(--color-accent-blue);
+  color: var(--color-main-dark);
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .titlecard{
   display: flex;
-  width: 50%;
-  padding-top: 3em;
+  font-family: "Gaegu";
+  height: 150px;
+  padding-top: 4em;
+  flex-shrink: 1;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
 }
 
-.container {
+.box {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  height: 200px;
+  width: auto;
 }
 
-.element {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+.textbox {
+  display: flex;
+  flex-flow: row wrap;
+  word-wrap: break-word;
+  height: 200px;
+  width: 200px;
+  font-family: "Karla";
+  text-align: left;
 }
+
 
