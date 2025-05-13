@@ -60,10 +60,6 @@ body {
   flex-flow: row nowrap;
   width: var(--container-width);
   justify-content: space-between;
-
-  border-style: ridge;
-  border-width: 2px;
-  border-color: var(--color-accent-blue);
 }
 
 .containerV {
