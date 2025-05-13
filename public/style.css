@@ -6,7 +6,18 @@
   --color-accent-blue: #99CCD6;
   --color-link: #393652;
   --color-link-clicked: #a1516c;
-  --main-page-width: 1000;
+}
+
+@property --pg-wodth {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 1000px;
+}
+
+@property --containerVWidth {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 200px;
 }
 
 body {
@@ -20,60 +31,75 @@ body {
 
 /* CONTAINERS ================================================================== */
 /* page: to hold all the elements in one central area */
+.body {
+  padding-top: 2em;
+}
+
 .page { 
+  background: pink;
   display: flex;
-  max-width: 1000px;
-  padding: 1em;
   flex-flow: row wrap;
+  --pg-width: 1000px;
+  max-width: var(--pg-width);
+  padding: 1em;
   row-gap: 10px;
   justify-content: space-evenly;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
-.containerV {
+.header{
   display: flex;
   flex-flow: column nowrap;
+  width: var(--pg-width);
+  background: white;
+  font-family: "Gaegu";
+  padding-top: 4em;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .containerH {
   display: flex;
   flex-flow: row nowrap;
+  width: var(--pg-width);
+  background: black;
+  justify-content: space-between;
+}
+
+.containerV {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 1200px;
+  background: green;
+  row-gap: 10px;
+}
+
+/* ================================== FORMATTING CLASSES ====================================== */
+.narrow {
+  --containerVWidth: 230px;
+  width: var(--containerVWidth);
+}
+
+.wide {
+  --containerVWidth: 520px;
+  width: var(--containerVWidth);
 }
 
 .sBox {
   display: flex;
   flex-flow: row wrap;
-  height: 200px;
+  background: yellow;
+  width: var(--containerVWidth);
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-.sBox .elem {
-  width: auto;
-}
-
-.sBox .text {
-  width: 200px;
   font-family: "Karla";
   text-align: left;
   word-wrap: break-word;
-}
-
-.titlecard{
-  display: flex;
-  font-family: "Gaegu";
-  height: 150px;
-  padding-top: 4em;
-  flex-shrink: 1;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ================================= OTHER MALARKEY ========================== */
