@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: var(--color-main-light);
+  background-color: var(--color-accent-blue);
   color: var(--color-main-medium);
   /* text-emphasis-color: #393652;
   accent-color: #99ccd6;
@@ -30,7 +30,7 @@ body {
 }
 
 .page { 
-  background: pink;
+  background: var(--color-main-light);
   display: flex;
   flex-flow: row wrap;
   --container-width: 1000px;
@@ -47,7 +47,6 @@ body {
   display: flex;
   flex-flow: column nowrap;
   width: var(--container-width);
-  background: white;
   font-family: "Gaegu";
   padding-top: 4em;
   align-items: center;
@@ -60,15 +59,17 @@ body {
   display: flex;
   flex-flow: row nowrap;
   width: var(--container-width);
-  background: black;
   justify-content: space-between;
+
+  border-style: ridge;
+  border-width: 2px;
+  border-color: var(--color-accent-blue);
 }
 
 .containerV {
   display: flex;
   flex-flow: column nowrap;
   height: 1200px;
-  background: green;
   row-gap: 10px;
 }
 
