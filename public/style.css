@@ -59,6 +59,13 @@ body {
   margin-right: auto;
 }
 
+.divider {
+  display: flex;
+  flex-flow: row nowrap;
+  width: var(--container-width);
+  justify-content: center;
+}
+
 .containerH {
   display: flex;
   flex-flow: row nowrap;
