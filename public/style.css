@@ -8,7 +8,7 @@
   --color-link-clicked: #a1516c;
 }
 
-@property --pg-wodth {
+@property --pg-width {
   syntax: "<length>";
   inherits: true;
   initial-value: 1000px;
