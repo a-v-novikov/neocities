@@ -84,10 +84,16 @@ body {
   width: var(--container-width);
 }
 
+.bordered {
+  border-style: ridge;
+  border-width: 2px;
+  border-radius: 100%;
+  border-color: var(--color-main-medium);
+}
+
 .sBox {
   display: flex;
   flex-flow: row wrap;
-  background: yellow;
   width: var(--container-width);
   justify-content: center;
   align-items: center;
