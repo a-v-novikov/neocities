@@ -1,0 +1,6 @@
+- acessibility features
+- mobile compatibility
+- light theme
+
+pages:
+- fav statues

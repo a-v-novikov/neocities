@@ -55,6 +55,8 @@ body {
 
 .divider {
   display: inline-block;
+  background-image: "https://media.tenor.com/wIphB-kJ74IAAAAi/bug-insect.gif";
+  background-repeat: repeat-x;
 }
 
 .main {
