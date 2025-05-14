@@ -14,18 +14,15 @@
 
 body {
   background-color: var(--color-background);
+  background-image: url('/assets/textures/grunge-texture-2.png');
+  background-repeat: repeat;
+  
   border-color: var(--color-border);
   color: var(--color-border);
   font-family: "Karla", "Gaegu", "Verdana";
 }
 
 /* CONTAINERS ================================================================== */
-@property --containerWidth {
-  syntax: "<length>";
-  inherits: true;
-  initial-value: 200px;
-}
-
 .page, .header, .main, .column, .footer, .divider, .img {
   width: var(--container-width);
 }
@@ -41,23 +38,25 @@ body {
   background: var(--color-background);
   border-style: double;
   border-width: 5px;
-  --container-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
   margin-top: 3em;
   margin-bottom: 5em;
 }
 
 .header {  
+  display: flex;
   height: 200px;
   border-bottom-style: double;
   border-bottom-width: 5px;
+  flex-flow: column nowrap;
 }
 
 .divider {
   display: inline-block;
-  background-image: "https://media.tenor.com/wIphB-kJ74IAAAAi/bug-insect.gif";
-  background-repeat: repeat-x;
 }
+
+/*              MAIN              */
 
 .main {
   display: flex;
@@ -67,26 +66,52 @@ body {
 
 .column{
   display: flex;
+  flex-flow: column nowrap;
+  background-repeat: repeat;
   box-sizing: border-box;
 }
 
-.colLeft {
-  margin-left: 10px;
-  --container-width: 230px;   
+.colLeft, .colRight {
+    background-image: url('/assets/textures/green_black.png');
 }
 
+/*MIDDLE COLUMN*/
 .colMiddle {
-  margin: 0 10px;
-  --container-width: 500px;  
+  background-image: url('/assets/textures/pink_green.png');
+  width: 530px;  
   border-left-width: 5px;
   border-right-width: 5px;
   border-left-style: double;
   border-right-style: double;
 }
+    
+    .colMiddleContent {
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 10px;
+        margin: 10px 10px;
+    }
+
+        .aboutLayer1 {
+            display: flex;
+            background-image: url('/assets/textures/warped_grid.png');
+            background-repeat: repeat;
+        }
+        
+        .aboutLayer2 {
+            display: flex;
+            background-image: url('/assets/textures/green_purple.png');
+            background-repeat: repeat;
+            margin: 10px;
+        }
+    
+
+.colLeft {
+  width: 220px;   
+}
 
 .colRight{
-  margin-right: 10px;
-  --container-width: 220px;   
+  width: 250px;   
 }
 
 /*TODO: border height/style as variable*/
@@ -100,6 +125,10 @@ body {
   height: auto;
 }
 
+.textbox {
+    display: inline-block;
+    text-align: center;
+}
 
 /* ================================= OTHER MALARKEY ========================== */
 
