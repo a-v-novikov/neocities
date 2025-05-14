@@ -1,3 +1,13 @@
+body {
+  background-color: var(--color-accent-blue);
+  color: var(--color-main-medium);
+  border-color: var(--color-main-medium);
+  /* text-emphasis-color: #393652;
+  accent-color: #99ccd6;
+  accent-color: #e995aa; */
+  font-family: "Karla", "Gaegu", "Verdana";
+}
+
 :root {
   --color-main-light: #FDF7F3;
   --color-main-medium: #4279a8;
@@ -8,103 +18,81 @@
   --color-link-clicked: #a1516c;
 }
 
+/* CONTAINERS ================================================================== */
 @property --containerWidth {
   syntax: "<length>";
   inherits: true;
   initial-value: 200px;
 }
 
-body {
-  background-color: var(--color-accent-blue);
-  color: var(--color-main-medium);
-  /* text-emphasis-color: #393652;
-  accent-color: #99ccd6;
-  accent-color: #e995aa; */
-  font-family: "Karla", "Gaegu", "Verdana";
+.page, .header, .main, .column, .footer, .divider, .img {
+  width: var(--container-width);
 }
 
-/* CONTAINERS ================================================================== */
+.divider, .column, .img {
+  display: inline-block;
+}
+
 /* page: to hold all the elements in one central area */
-.body {
-  padding-top: 2em;
-}
-
 .page { 
   background: var(--color-main-light);
-  display: flex;
-  flex-flow: row wrap;
-  --container-width: 1000px;
-  max-width: var(--container-width);
-  padding: 1em;
-  row-gap: 10px;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin: auto;
-  border-style: outset double;
+  border-style: double;
   border-width: 5px;
-  border-radius: 1%;
-  border-color: var(--color-accent-pink);
+  --container-width: 1000px;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 5em;
 }
 
-.header{
-  display: flex;
-  flex-flow: column nowrap;
-  width: var(--container-width);
-  font-family: "Gaegu";
-  padding-top: 4em;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: auto;
-  margin-right: auto;
+.header {  
+  height: 200px;
+  border-bottom-style: double;
+  border-bottom-width: 5px;
 }
 
 .divider {
-  display: flex;
-  flex-flow: row nowrap;
-  width: var(--container-width);
-  justify-content: center;
+  display: inline-block;
 }
 
-.containerH {
-  display: flex;
-  flex-flow: row nowrap;
-  width: var(--container-width);
-  justify-content: space-between;
+.main {
+  position: relative;
+  height: 1000px;
 }
 
-.containerV {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 1200px;
-  row-gap: 10px;
-  border-style: ridge;
-  border-width: 3px;
-  border-color: var(--color-main-medium);
+.column{
+  position: static;
 }
 
-/* ================================== FORMATTING CLASSES ====================================== */
-.narrow {
-  --container-width: 230px;
-  width: var(--container-width);
+.colLeft {
+  margin-left: 10px;
+  background: blue;
+  --container-width: 230px;   
 }
 
-.wide {
-  --container-width: 520px;
-  width: var(--container-width);
+.colMiddle {
+  margin: 0 10px;
+  background:red;
+  --container-width: 500px;   
 }
 
-.sBox {
-  display: flex;
-  flex-flow: row wrap;
-  width: var(--container-width);
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  font-family: "Karla";
-  text-align: left;
-  word-wrap: break-word;
+.colRight{
+  margin-right: 10px;
+  background:green;
+  --container-width: 220px;   
 }
+
+/*TODO: border height/style as variable*/
+.footer {
+  height: 200px;
+  border-top-style: double;
+  border-top-width: 5px;
+}
+
+.img {
+  height: auto;
+  margin: auto;
+}
+
 
 /* ================================= OTHER MALARKEY ========================== */
 
@@ -123,13 +111,18 @@ body {
 
 /* paragraph style */
 h1 {
-    text-align: center;
-    font-family: "Gaegu";
+  text-align: center;
+  font-family: "Gaegu";
+  margin: 10px auto;
 }
 
 h2 {
-    text-align: center;
-    font-family: "Gaegu";
+  text-align: center;
+  font-family: "Gaegu";
+}
+
+p {
+  margin: 0;
 }
 
 /* colors */
