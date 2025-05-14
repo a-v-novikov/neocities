@@ -17,7 +17,7 @@
 
 body {
   background-color: var(--color-background);
-  background-image: url('/assets/textures/grunge-texture-2.png');
+  background-image: url('/assets/theme/backgrounds/paper-1.png');
   background-repeat: repeat;
   
   border-color: var(--color-border);
@@ -74,12 +74,12 @@ element {
 }
 
 .colLeft, .colRight {
-    background-image: url('/assets/textures/green_black.png');
+    background-image: url('/assets/theme/backgrounds/paper-3.jpg');
 }
 
 /*MIDDLE COLUMN*/
 .colMiddle {
-  background-image: url('/assets/textures/pink_green.png');
+  background-image: url('/assets/theme/backgrounds/forest.jpg');
   width: 530px;  
   border-left-width: 5px;
   border-right-width: 5px;
@@ -95,7 +95,7 @@ element {
     }
 
         .aboutLayer1 {
-            background-image: url('/assets/textures/warped_grid.png');
+            background-image: url('/assets/theme/backgrounds/notebook-1.png');
             background-repeat: repeat;
             border-style: ridge;
             border-width: 1px;
@@ -103,7 +103,7 @@ element {
         }
         
         .aboutLayer2 {
-            background-image: url('https://img1.picmix.com/output/stamp/normal/0/6/1/5/2515160_c7085.png');
+            background-image: url('/assets/theme/borders/flower-1.png');
             background-color: #FFFFFF;
             background-repeat: repeat;
             border-style: ridge;
