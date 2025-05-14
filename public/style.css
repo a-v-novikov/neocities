@@ -1,7 +1,10 @@
+@import "fonts.css";
+
 :root {
   /*will be replaced with textured image*/
   --color-background: #3a3d37;
   --color-border: #8C9D42;
+  --color-thin-border: #3a3d37;
   
   --color-main-light: #FDF7F3;
   --color-main-medium: #4279a8;
@@ -19,14 +22,14 @@ body {
   
   border-color: var(--color-border);
   color: var(--color-border);
-  font-family: "Karla", "Gaegu", "Verdana";
+  font-family: "VT323";
+}
+
+element {
+    float: left;
 }
 
 /* CONTAINERS ================================================================== */
-.page, .header, .main, .column, .footer, .divider, .img {
-  width: var(--container-width);
-}
-
 
 .divider, .img {
   margin: auto 0;
@@ -45,16 +48,15 @@ body {
 }
 
 .header {  
-  display: flex;
   height: 200px;
+  background-image: url('/assets/header/header.png');
   border-bottom-style: double;
   border-bottom-width: 5px;
-  flex-flow: column nowrap;
-}
-
-.divider {
-  display: inline-block;
-}
+  font-family: "Sixty Four";
+}    
+    .divider {
+      display: inline-block;
+    }
 
 /*              MAIN              */
 
@@ -93,16 +95,22 @@ body {
     }
 
         .aboutLayer1 {
-            display: flex;
             background-image: url('/assets/textures/warped_grid.png');
             background-repeat: repeat;
+            border-style: ridge;
+            border-width: 1px;
+            border-color: var(--color-thin-border);
         }
         
         .aboutLayer2 {
-            display: flex;
-            background-image: url('/assets/textures/green_purple.png');
+            background-image: url('https://img1.picmix.com/output/stamp/normal/0/6/1/5/2515160_c7085.png');
+            background-color: #FFFFFF;
             background-repeat: repeat;
+            border-style: ridge;
+            border-width: 1px;
+            border-color: var(--color-thin-border);
             margin: 10px;
+            padding: 5px;
         }
     
 
@@ -132,29 +140,16 @@ body {
 
 /* ================================= OTHER MALARKEY ========================== */
 
-/* fonts */
-.gaegu-regular {
-  font-family: "Gaegu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.karla-light {
-  font-family: "Karla", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
 /* paragraph style */
 h1 {
+    margin: 0px;
   text-align: center;
-  font-family: "Gaegu";
-  margin: 10px auto;
+  font-family: "Sixtyfour";
 }
 
 h2 {
   text-align: center;
-  font-family: "Gaegu";
+  font-family: "Jersey 10";
 }
 
 p {
