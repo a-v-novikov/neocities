@@ -2,13 +2,13 @@
 
 :root {
   /*will be replaced with textured image*/
-  --color-background: #3a3d37;
-  --color-border: #8C9D42;
-  --color-thin-border: #3a3d37;
+  --color-dark: #132214;
+  --color-green: #8C9D42;
+  --color-gray: #3a3d37;
   
   --color-main-light: #FDF7F3;
   --color-main-medium: #4279a8;
-  --color-main-dark: #393652;
+  --color-main-dark: #132214;
   --color-accent-pink: #e995aa;
   --color-accent-blue: #99CCD6;
   --color-link: #393652;
@@ -16,12 +16,10 @@
 }
 
 body {
-  background-color: var(--color-background);
-  background-image: url('/assets/theme/backgrounds/paper-1.png');
-  background-repeat: repeat;
-  
-  border-color: var(--color-border);
-  color: var(--color-border);
+  background-color: var(--color-dark);
+  background-image: url('/assets/theme-cyber/backgrounds/transmission-towers.png');
+  background-size: 100vw;
+  color: var(--color-dark);
   font-family: "VT323";
 }
 
@@ -40,6 +38,7 @@ element {
 .page { 
   background: var(--color-background);
   border-style: double;
+  border-color: var(--color-green);
   border-width: 5px;
   width: 1000px;
   margin: 0 auto;
@@ -51,6 +50,7 @@ element {
   height: 200px;
   background-image: url('/assets/header/header.png');
   border-bottom-style: double;
+  border-color: var(--color-green);
   border-bottom-width: 5px;
   font-family: "Sixty Four";
 }    
@@ -83,6 +83,7 @@ element {
   width: 530px;  
   border-left-width: 5px;
   border-right-width: 5px;
+  border-color: var(--color-green);
   border-left-style: double;
   border-right-style: double;
 }
@@ -126,6 +127,7 @@ element {
 .footer {
   height: 200px;
   border-top-style: double;
+  border-color: var(--color-green);
   border-top-width: 5px;
 }
 
