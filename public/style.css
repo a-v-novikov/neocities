@@ -1,168 +1,151 @@
 @import "fonts.css";
+@import "formats.css";
 
 :root {
-  /*will be replaced with textured image*/
-  --color-dark: #132214;
-  --color-green: #8C9D42;
-  --color-gray: #3a3d37;
-  
-  --color-main-light: #FDF7F3;
-  --color-main-medium: #4279a8;
-  --color-main-dark: #132214;
-  --color-accent-pink: #e995aa;
-  --color-accent-blue: #99CCD6;
-  --color-link: #393652;
-  --color-link-clicked: #a1516c;
+    /*will be replaced with textured image*/
+    --color-dark: black;
+    --color-text: #9CC25A;
+    --color-light: #FBFEE5;
+    --color-gray: #606257;
 }
 
 body {
-  background-color: var(--color-dark);
-  background-image: url('/assets/theme-cyber/backgrounds/transmission-towers.png');
-  background-size: 100vw;
-  color: var(--color-dark);
-  font-family: "VT323";
+    color: var(--color-text);
+    background-color: var(--color-dark);
+    background-image: url('https://img.freepik.com/free-photo/abstract-geometric-background-shapes-texture_1194-305448.jpg');
+    background-repeat: repeat;
+    font-family: "VT323";
+    font-size: 2vh;
+    /*box-sizing: border-box;*/
+    border-width: 4px;
 }
 
-element {
-    float: left;
+h1 {
+    margin: 0px;
+    font-size: 2vh;
+    text-align: center;
+    font-family: "Sixtyfour", normal;
 }
+
+h2 {
+    text-align: center;
+    font-family: "Jersey 10";
+}
+
 
 /* CONTAINERS ================================================================== */
 
-.divider, .img {
-  margin: auto 0;
-  display: inline-block;
-}
-
 /* page: to hold all the elements in one central area */
+/* PAGE DIMS IN TERMS OF VIEWINDOW*/
 .page { 
-  background: var(--color-background);
-  border-style: double;
-  border-color: var(--color-green);
-  border-width: 5px;
-  width: 1000px;
-  margin: 0 auto;
-  margin-top: 3em;
-  margin-bottom: 5em;
+    width: 80vw;
+    height: 92vh;
+    margin: 0 auto;
+    margin: 4vh auto;
 }
 
+/* ELEMENT DIMS IN TERMS OF EM*/
 .header {  
-  height: 200px;
-  background-image: url('/assets/header/header.png');
-  border-bottom-style: double;
-  border-color: var(--color-green);
-  border-bottom-width: 5px;
-  font-family: "Sixty Four";
-}    
-    .divider {
-      display: inline-block;
-    }
-
-/*              MAIN              */
+    height: 15%;
+    border-style: ridge;
+    border-color: var(--color-text);
+    
+    background-image: url('/subahibi2.png');
+    background-size: 100%;
+    background-position-y: 30%;
+} 
 
 .main {
-  display: flex;
-  position: relative;
-  height: 1000px;
-}
-
-.column{
-  display: flex;
-  flex-flow: column nowrap;
-  background-repeat: repeat;
-  box-sizing: border-box;
-}
-
-.colLeft, .colRight {
-    background-image: url('/assets/theme/backgrounds/paper-3.jpg');
-}
-
-/*MIDDLE COLUMN*/
-.colMiddle {
-  background-image: url('/assets/theme/backgrounds/forest.jpg');
-  width: 530px;  
-  border-left-width: 5px;
-  border-right-width: 5px;
-  border-color: var(--color-green);
-  border-left-style: double;
-  border-right-style: double;
-}
-    
-    .colMiddleContent {
-        display: flex;
-        flex-flow: column nowrap;
-        row-gap: 10px;
-        margin: 10px 10px;
-    }
-
-        .aboutLayer1 {
-            background-image: url('/assets/theme/backgrounds/notebook-1.png');
-            background-repeat: repeat;
-            border-style: ridge;
-            border-width: 1px;
-            border-color: var(--color-thin-border);
-        }
-        
-        .aboutLayer2 {
-            background-image: url('/assets/theme/borders/flower-1.png');
-            background-color: #FFFFFF;
-            background-repeat: repeat;
-            border-style: ridge;
-            border-width: 1px;
-            border-color: var(--color-thin-border);
-            margin: 10px;
-            padding: 5px;
-        }
-    
-
-.colLeft {
-  width: 220px;   
-}
-
-.colRight{
-  width: 250px;   
+    display: flex;
+    height: 71%;
+    margin: 0.5vh 0;
+    border-style: ridge;
+    border-color: var(--color-text);
 }
 
 /*TODO: border height/style as variable*/
 .footer {
-  height: 200px;
-  border-top-style: double;
-  border-color: var(--color-green);
-  border-top-width: 5px;
+    height: 10%;
+    border-style: ridge;
+    border-color: var(--color-text);
 }
 
-.img {
-  height: auto;
+/* MIDDLE CONTENT ==================================================================================*/
+
+.column{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-dark) var(--color-text);
+    
+    background-repeat: repeat;
 }
 
-.textbox {
-    display: inline-block;
-    text-align: center;
+.colLeft, .colRight {
+    background: var(--color-light);
+    background-image: url('https://i.pinimg.com/736x/7f/83/6c/7f836c01687c28677d8ca331cb96c346.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* ================================= OTHER MALARKEY ========================== */
-
-/* paragraph style */
-h1 {
-    margin: 0px;
-  text-align: center;
-  font-family: "Sixtyfour";
+.colContent {
+    margin: 0.5vw;
 }
 
-h2 {
-  text-align: center;
-  font-family: "Jersey 10";
+/*MIDDLE COLUMN ==================================================================================*/
+.colMiddle {
+    width: 50vw;  
+    border-color: var(--color-text);
+    border-left-style: ridge;
+    border-right-style: ridge;
+    
+    background-image: url('https://img.freepik.com/free-photo/abstract-geometric-background-shapes-texture_1194-305448.jpg');
+    background-repeat: repeat;    
+}
+    .aboutLayer1 {
+        background-image: url('https://images.pexels.com/photos/6788340/pexels-photo-6788340.jpeg?cs=srgb&dl=pexels-polina-kovaleva-6788340.jpg&fm=jpg');
+        background-size: 100%;
+        padding: 10px;
+    }
+    
+        .aboutLayer2 {
+            background-image: url('https://i.pinimg.com/736x/1d/bf/62/1dbf6242af15d8b935f46551b2f50a87.jpg');
+            background-size: 100%;
+            padding: 10px;
+            
+        }
+        
+            .aboutText {
+                margin: 0;
+                padding: 1vh 0 0 10px;
+            }
+
+/* LEFT SIDEBAR  ==================================================================================*/
+.colLeft {
+    width: 13vw;   
 }
 
-p {
-  margin: 0;
+    .navLayer1{
+        background-image: url('https://img1.picmix.com/output/stamp/normal/6/4/1/2/1982146_f1ed3.gif');
+        background-color: var(--color-dark);
+        background-size: 100% 100%;
+    }
+        
+        .navLayer2 {
+            color: var(--color-text);
+            margin: 0;
+            padding: 10px;
+        }
+        
+    .monster {
+        padding: 10px;
+        height: 10vw;
+    }
+
+/* RIGHT SIDEBAR  ==================================================================================*/
+.colRight{
+  width: 17vw;   
 }
 
-/* colors */
-/*a:any-link{*/
-/*    color: var(--color-link);*/
-/*}*/
 
-/*a:visited{*/
-/*    color: var(--color-link-clicked);*/
-/*}*/
